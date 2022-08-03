@@ -1,0 +1,27 @@
+<template>
+  <div :class="myCssClass">
+      <slot></slot>
+  </div>
+</template>
+
+<script>
+const staticClass="bg-white shadow";
+export default {
+    props:['estColler','espace'],
+    computed:{
+        myCssClass(){
+            if(this.estColler){
+                return staticClass;
+            }
+            else{
+                let espace=(this.espace)?this.espace:5;
+                return staticClass+' p-'+espace+' mb-'+espace;
+            }
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

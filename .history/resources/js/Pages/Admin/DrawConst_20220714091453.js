@@ -1,0 +1,30 @@
+export const drawConstante={
+    draw_paragraphe:{
+        nom:"ParagrapheDraw",
+        mmodel:{
+             cssClass:{
+            'font-size':'text-sm',
+            'color':'text-neutral-800',
+            }
+        }
+
+    },
+    draw_titre:{
+        nom:"TitreDraw",
+        mmodel:{
+            cssClass:{
+           'font-size':'text-sm',
+           'color':'text-neutral-800',
+           }
+       }
+    },
+    draw_image:{
+        nom:"ImageDraw",
+        mmodel:{
+            cssClass:{
+           'font-size':'text-sm',
+           'color':'text-neutral-800',
+           }
+       }
+    },
+}

@@ -1,0 +1,29 @@
+<template>
+    <div class="relative" >
+        <div>
+            <img :src="pub.image" alt="" class="w-full object-cover h-[24rem] 2xl:h-[30rem]">
+        </div>
+        <div>
+            <div class="text-5xl font-bold py-5">
+                {{pub.titre}}
+            </div>
+            <p class="">
+                {{pub.text}}
+            </p>
+        </div>
+        <div class="absolute bottom- bg-red-000 text-white px-4 py-2">
+            Politique
+        </div>
+    </div>
+
+</template>
+
+<script>
+export default {
+    props:  ['pub']
+}
+</script>
+
+<style>
+
+</style>

@@ -1,0 +1,37 @@
+<template>
+    <div class="flex group " @click="onClick">
+        <my-img :src="pub.image" alt="" :class="{'order-2':inverser,'order-1':!inverser} " :size="imageSize" />
+        <div :class=" {'order-1 flex flex-col justify-between h-full':true,']pr-2':inverser,'pl-2':!inverser}">
+            <titre-3 :size='textSize' class="group-hover:underline h-4/5'">
+                <text-limit :text="pub.titre" :maxLength="limitTitre" />
+            </titre-3>
+            <div class="text-neutral-600 pb-1 h-1/5" >societé</div>
+
+        </div>
+    </div>
+</template>
+
+<script>
+import MyImg from '../Images/MyImg.vue'
+import Paragraphe from '../Text/Paragraphe.vue'
+import TextLimit from '../Text/TextLimit.vue'
+import Titre3 from '../Text/Titre3.vue'
+export default {
+  components: { MyImg, Titre3, Paragraphe, TextLimit },
+    props:  ['pub',"textSize",'imageSize',"paragrapheSize",'limitTitre','limitParagraphe','inverser'],
+    computed:{
+        pSize(){
+            return (this.paragrapheSize)?this.paragrapheSize : this.textSize;
+        },
+    },
+    methods:{
+        onClick(){
+            window.location.href='/detail';
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

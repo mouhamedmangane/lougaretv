@@ -1,0 +1,36 @@
+import { reactive, ref } from 'vue'
+
+export default {
+    draw_paragraphe:{
+        nom:"ParagraheDraw",
+        mmodel:{
+             cssClass:{
+            'font-size':'text-sm',
+            'color':'text-neutral-800',
+            },
+            txt:ref("my paragraphe")
+        }
+
+    },
+    draw_titre:{
+        nom:"TitreDraw",
+        mmodel:{
+            cssClass:{
+                'font-size':'text-2xl',
+                'color':'text-neutral-800',
+            },
+            niveau:'2',
+            txt:"Titre 2"
+
+       }
+    },
+    draw_image:{
+        nom:"ImageDraw",
+        mmodel:{
+            cssClass:{
+           'width':'w-full',
+           'height':'',
+           }
+       }
+    },
+}

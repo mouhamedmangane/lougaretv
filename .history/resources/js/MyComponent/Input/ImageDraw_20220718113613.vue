@@ -1,0 +1,40 @@
+<template>
+<div @click="onClick">
+   <img  :src="src" alt="" class="w-full apect[3/1.68]" ref="img" />
+  <input type="file" v-show="false" @change="onChange" ref="inputFile" />
+</div>
+
+</template>
+
+<script>
+
+export default {
+    props:['modelValue','pathImage'],
+    data(){
+        return {
+            src:this.pathImage,
+        };
+    },
+    emits:['update:modelValue'],
+    methods:{
+        onChange(event){
+             let file=event.target.files[0];
+             this.src = window.URL.createObjectURL(file);
+             this.emits('update:modelValue',{file:file});
+        },
+        onClick(event){
+            this.$refs.inputFile.click();
+
+
+        }
+    },
+    mounted(){
+       this.$refs.inputFile.click();
+
+    }
+}
+</script>
+
+<style>
+
+</style>
